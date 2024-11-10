@@ -1,0 +1,46 @@
+AlsaOut::AlsaOut() called
+[2024-05-03 13:16:05] [info] asio async_connect error: asio.system:111 (Connection refused)
+[2024-05-03 13:16:05] [info] Error getting remote endpoint: asio.system:107 (Transport endpoint is not connected)
+[2024-05-03 13:16:05] [error] handle_connect error: Connection refused
+ALSA lib pcm_dsnoop.c:567:(snd_pcm_dsnoop_open) unable to open slave
+ALSA lib pcm_dmix.c:1000:(snd_pcm_dmix_open) unable to open slave
+ALSA lib pcm.c:2721:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.rear
+ALSA lib pcm.c:2721:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.center_lfe
+ALSA lib pcm.c:2721:(snd_pcm_open_noupdate) Unknown PCM cards.pcm.side
+Cannot connect to server socket err = No such file or directory
+Cannot connect to server request channel
+jack server is not running or cannot be started
+JackShmReadWritePtr::~JackShmReadWritePtr - Init not done for -1, skipping unlock
+JackShmReadWritePtr::~JackShmReadWritePtr - Init not done for -1, skipping unlock
+Cannot connect to server socket err = No such file or directory
+Cannot connect to server request channel
+jack server is not running or cannot be started
+JackShmReadWritePtr::~JackShmReadWritePtr - Init not done for -1, skipping unlock
+JackShmReadWritePtr::~JackShmReadWritePtr - Init not done for -1, skipping unlock
+ALSA lib pcm_oss.c:397:(_snd_pcm_oss_open) Cannot open device /dev/dsp
+ALSA lib pcm_oss.c:397:(_snd_pcm_oss_open) Cannot open device /dev/dsp
+ALSA lib pcm_a52.c:1001:(_snd_pcm_a52_open) a52 is only for playback
+ALSA lib confmisc.c:160:(snd_config_get_card) Invalid field card
+ALSA lib pcm_usb_stream.c:482:(_snd_pcm_usb_stream_open) Invalid card 'card'
+ALSA lib confmisc.c:160:(snd_config_get_card) Invalid field card
+ALSA lib pcm_usb_stream.c:482:(_snd_pcm_usb_stream_open) Invalid card 'card'
+ALSA lib pcm_dmix.c:1000:(snd_pcm_dmix_open) unable to open slave
+Cannot connect to server socket err = No such file or directory
+Cannot connect to server request channel
+jack server is not running or cannot be started
+JackShmReadWritePtr::~JackShmReadWritePtr - Init not done for -1, skipping unlock
+JackShmReadWritePtr::~JackShmReadWritePtr - Init not done for -1, skipping unlock
+PulseOut::PulseOut() called
+SndioOut Info: ---------- sndout.ctor ----------
+AlsaOut: destructor
+AlsaOut: joining...
+AlsaOut: thread finished
+AlsaOut: closing device...
+AlsaOut: destroyed.
+SndioOut Info: joining thread
+couldn't open play stream: No such file or directory
+SndioOut Info: failed to init device
+SndioOut Info: thread finished
+[2024-05-03 13:16:06] [error] handle_read_frame error: websocketpp.transport:7 (End of File)
+PulseOut: destroy
+PulseOut: destructor
