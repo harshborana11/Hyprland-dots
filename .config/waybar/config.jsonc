@@ -8,13 +8,13 @@
   "height": 0,
   "modules-left": [
     "custom/launcher",
-    "cpu",
-    "memory",
-    "disk",
-    "temperature",
-    "custom/weather",
-    "custom/update",
-    "hyprland/window"
+    // "cpu",
+    // "memory",
+    // "disk",
+    // "temperature",
+    // "custom/weather",
+    // "custom/update",
+    "hyprland/window",
   ],
   "modules-center": ["hyprland/workspaces"],
   "modules-right": [
@@ -29,20 +29,10 @@
     "battery",
     "backlight",
     "custom/notification",
-    "clock"
+    "clock",
   ],
   "hyprland/workspaces": {
-    "disable-scroll": true,
-    "all-outputs": true,
-    "on-click": "activate",
-    "on-scroll-up": "hyprctl dispatch workspace e+1",
-    "on-scroll-down": "hyprctl dispatch workspace e-1",
-    "format": "{icon}",
-    // "format-icons": {
-    //   "active": "",
-    //   "default": ""
-    // },
-    "persistent_workspaces": {
+    "persistent-workspaces": {
       "1": [],
       "2": [],
       "3": [],
@@ -52,19 +42,30 @@
       "7": [],
       "8": [],
       "9": [],
-      "10": []
-    }
+      "10": [],
+    },
+    "disable-scroll": true,
+    "all-outputs": true,
+    "active-only": false,
+    "on-click": "activate",
+    "on-scroll-up": "hyprctl dispatch workspace e+1",
+    "on-scroll-down": "hyprctl dispatch workspace e-1",
+    "format": "{icon}",
+    // "format-icons": {
+    //   "active": "",
+    //   "default": ""
+    // },
   },
   "hyprland/window": {
-    "format": "󰣇 {}"
+    "format": "󰣇 {}",
   },
   "tray": {
     "icon-size": 13,
-    "spacing": 10
+    "spacing": 10,
   },
   "clock": {
     "format": " {:%T}",
-    "interval":1,
+    "interval": 1,
     "format-alt": " {:%A, %B %d, %Y, %T} ",
     "tooltip-format": "<tt><small>{calendar}</small></tt>",
     "calendar": {
@@ -78,16 +79,16 @@
         "days": "<span color='#cdd6f4'><b>{}</b></span>",
         "weeks": "<span color='#94e2d5'><b>W{}</b></span>",
         "weekdays": "<span color='#f9e2af'><b>{}</b></span>",
-        "today": "<span color='#f38ba8'><b><u>{}</u></b></span>"
-      }
+        "today": "<span color='#f38ba8'><b><u>{}</u></b></span>",
+      },
     },
     "actions": {
       "on-click-right": "mode",
       "on-click-forward": "tz_up",
       "on-click-backward": "tz_down",
       "on-scroll-up": "shift_up",
-      "on-scroll-down": "shift_down"
-    }
+      "on-scroll-down": "shift_down",
+    },
   },
   "network": {
     // "interface": "wlan0", (optional) to focus on the interface
@@ -97,7 +98,7 @@
     "format-linked": "{ifname} (No IP) ",
     "format-disconnected": "Disconnected ⚠",
     "format-alt": "{ifname}:{essid} {ipaddr}/{cidr}",
-    "on-click-right": "~/.config/waybar/scripts/rofi-wifi-menu"
+    "on-click-right": "~/.config/waybar/scripts/rofi-wifi-menu",
   },
   "bluetooth": {
     "exec": "~/.config/waybar/scripts/rofi-bluetooth-menu --status",
@@ -106,19 +107,19 @@
     "tooltip-format": "{device_alias}",
     "tooltip-format-connected": " {device_enumerate}",
     "tooltip-format-enumerate-connected": "{device_alias}",
-    "on-click-right": "~/.config/waybar/scripts/rofi-bluetooth-menu"
+    "on-click-right": "~/.config/waybar/scripts/rofi-bluetooth-menu",
   },
   "memory": {
     "interval": 1,
     "format": " {}%",
     "tooltip": true,
     "tooltip-format": "Memory - {used:0.1f}GB used",
-    "on-click": "kitty --start-as=fullscreen --title btop sh -c 'btop'"
+    "on-click": "kitty --start-as=fullscreen --title btop sh -c 'btop'",
   },
   "cpu": {
     "interval": 1,
     "format": " {usage}%",
-    "on-click": "kitty --start-as=fullscreen --title btop sh -c 'btop'"
+    "on-click": "kitty --start-as=fullscreen --title btop sh -c 'btop'",
   },
   "disk": {
     "interval": 1,
@@ -128,7 +129,7 @@
     "format-alt": "󰋊 {percentage_used}%",
     "tooltip": true,
     "tooltip-format": "Disk - {used} used out of {total} on {path} ({percentage_used}%)",
-    "on-click": "kitty --start-as=fullscreen --title btop sh -c 'btop'"
+    "on-click": "kitty --start-as=fullscreen --title btop sh -c 'btop'",
   },
   "temperature": {
     "interval": 1,
@@ -136,38 +137,38 @@
     "format": " {temperatureC}°C",
     "critical-threshold": 80,
     "format-critical": " {temperatureC}°C",
-    "on-click": "kitty --start-as=fullscreen --title btop sh -c 'btop'"
+    "on-click": "kitty --start-as=fullscreen --title btop sh -c 'btop'",
   },
   "custom/weather": {
     "tooltip": true,
     "format": "{}",
     "interval": 60,
     "exec": "~/.config/waybar/scripts/waybar-wttr.py",
-    "return-type": "json"
+    "return-type": "json",
   },
   "custom/randwall": {
     "format": "󰏘",
     "on-click": "bash $HOME/.config/ags/scripts/color_generation/switchwall.sh",
-    "on-click-right": "bash $HOME/.config/hypr/wall.sh"
+    "on-click-right": "bash $HOME/.config/hypr/wall.sh",
   },
   "custom/update": {
     "format": "{}",
     "interval": 60,
     "exec": "~/.config/waybar/scripts/update",
     "on-click": "~/.config/waybar/scripts/update update",
-    "tooltip": false
+    "tooltip": false,
   },
   "battery": {
     "states": {
       "good": 95,
       "warning": 30,
-      "critical": 20
+      "critical": 20,
     },
     "format": "{icon} {capacity}%",
     "format-charging": " {capacity}%",
     "format-plugged": " {capacity}%",
     "format-alt": "{time} {icon}",
-    "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
+    "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
   },
   "pulseaudio#output": {
     "format": "{icon} {volume}%",
@@ -184,10 +185,10 @@
       "phone": "",
       "portable": "",
       "car": "",
-      "default": ["", "", ""]
+      "default": ["", "", ""],
     },
     "tooltip": true,
-    "tooltip-format": "{icon} at {volume}%"
+    "tooltip-format": "{icon} at {volume}%",
   },
   "pulseaudio#input": {
     "format": "{format_source}",
@@ -199,20 +200,20 @@
     "on-scroll-down": "~/.config/waybar/scripts/volume --mic-dec",
     "scroll-step": 5,
     "tooltip": true,
-    "tooltip-format": " at {volume}%"
+    "tooltip-format": " at {volume}%",
   },
   "mpris": {
     "format": "{player_icon} {dynamic}",
     "format-paused": "{status_icon} <i>{dynamic}</i>",
     "player-icons": {
       "default": "▶",
-      "mpv": "🎵"
+      "mpv": "🎵",
     },
     "status-icons": {
-      "paused": "⏸"
+      "paused": "⏸",
     },
     "interval": 1,
-    "max-length": 60
+    "max-length": 60,
   },
   "backlight": {
     "device": "intel_backlight",
@@ -220,21 +221,22 @@
     "format-icons": ["󰃞", "󰃟", "󰃠"],
     "on-scroll-up": "~/.config/waybar/scripts/brightness --inc",
     "on-scroll-down": "~/.config/waybar/scripts/brightness --dec",
-    "min-length": 6
+    "min-length": 6,
   },
   "custom/hyprpicker": {
     "format": "󰈋",
     "on-click": "hyprpicker -a -f hex",
-    "on-click-right": "hyprpicker -a -f rgb"
+    "on-click-right": "hyprpicker -a -f rgb",
   },
   "custom/launcher": {
     "format": "",
     "on-click": "bash $HOME/.config/rofi/launchers/launcher.sh",
-//    "on-click": "wofi --show drun -I -a -n -W 500 -H 376 -s ~/.config/wofi/themes/gruvbox.css",
-    "on-click-right": "bash $HOME/.config/rofi/run.sh"  
-//    "on-click-right": "wofi --show run -I -a -n -W 500 -H 376 -s ~/.config/wofi/themes/gruvbox.css"  
+    //    "on-click": "wofi --show drun -I -a -n -W 500 -H 376 -s ~/.config/wofi/themes/gruvbox.css",
+    "on-click-right": "bash $HOME/.config/rofi/run.sh",
+    //    "on-click-right": "wofi --show run -I -a -n -W 500 -H 376 -s ~/.config/wofi/themes/gruvbox.css"
   },
   "custom/notification": {
+    "tooltip": false,
     "format": "{icon}",
     "format-icons": {
       "notification": "<span foreground='red'><sup></sup></span>",
@@ -244,13 +246,13 @@
       "inhibited-notification": "<span foreground='red'><sup></sup></span>",
       "inhibited-none": "",
       "dnd-inhibited-notification": "<span foreground='red'><sup></sup></span>",
-      "dnd-inhibited-none": ""
+      "dnd-inhibited-none": "",
     },
     "return-type": "json",
     "exec-if": "which swaync-client",
     "exec": "swaync-client -swb",
     "on-click": "swaync-client -t -sw",
     "on-click-right": "swaync-client -d -sw",
-    "escape": true
+    "escape": true,
   },
 }
