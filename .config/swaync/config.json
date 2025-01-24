@@ -50,7 +50,7 @@
 			      "show-per-app": true
         },
         "backlight": {
-            "label": "",
+            "label": "",
             "device": "intel_backlight",
             "min": 10
         },

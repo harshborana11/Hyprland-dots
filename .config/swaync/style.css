@@ -226,4 +226,6 @@
     background: transparent
 }
 
-
+.widget-volume {
+  color: @foreground;
+}
