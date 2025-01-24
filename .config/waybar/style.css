@@ -14,7 +14,7 @@ window#waybar {
 }
 
 tooltip {
-  border-radius: 10px;
+  border-radius: 20px;
   border-width: 0px;
   background: @background;
 }
@@ -23,6 +23,7 @@ tooltip {
   padding: 5px;
   color: @color14;
   margin-right: 5px;
+  border-radius:20px;
   background-color: @background;
 }
 
@@ -33,19 +34,19 @@ tooltip {
 #workspaces button.focused {
   color: @foreground;
   background: @background;
-  border-radius: 10px;
+  border-radius: 20px;
 }
 
 #workspaces button.urgent {
   color: @foreground;
   background: @background;
-  border-radius: 10px;
+  border-radius: 20px;
 }
 
 #workspaces button:hover {
   background: @foreground;
   color: @background;
-  border-radius: 10px;
+  border-radius: 20px;
 }
 
 #custom-weather,
@@ -70,38 +71,37 @@ tooltip {
   background: @background;
   padding: 2px 8px;
   margin: 3px 3px;
-  border-radius: 10px;
+  border-radius: 20px;
 }
 #custom-notification {
   background-color: @background;
   color: @foreground;
-  margin-right: 6px;
-  padding-left: 6px;
+  margin-right: 2px;
 }
 #tray {
-  border-radius: 10px;
+  border-radius: 20px;
   margin-right: 5px;
 }
 
 #workspaces {
   background: @background;
-  border-radius: 10px;
+  border-radius: 20px;
   margin-left: 5px;
   padding-right: 0px;
   padding-left: 5px;
 }
 #window {
-  border-radius: 10px;
+  border-radius: 20px;
   margin-left: 5px;
   margin-right: 5px;
 }
 #clock {
   color: @color6;
+    padding: 10px;
+
   /* background-color: #282828; */
   background-color: @background;
   border-radius: 0px 0px 0px 20px;
-  padding-left: 13px;
-  padding-right: 15px;
   margin-right: 0px;
   margin-left: 10px;
   margin-top: 0px;
@@ -145,13 +145,13 @@ tooltip {
 
 #mpris {
   color: @foreground;
-  border-radius: 10px;
+  border-radius: 20px;
   margin-right: 5px;
   margin-left: 5px;
 }
 #bluetooth {
   color: @foreground;
-  border-radius: 10px;
+  border-radius: 20px;
 }
 
 #network {
